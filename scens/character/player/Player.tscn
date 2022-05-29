@@ -1,0 +1,346 @@
+[gd_scene load_steps=75 format=2]
+
+[ext_resource path="res://scens/character/player/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/Character/Idle2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Character/Idle5.png" type="Texture" id=3]
+[ext_resource path="res://assets/Character/Run5.png" type="Texture" id=4]
+[ext_resource path="res://assets/Character/Run7.png" type="Texture" id=5]
+[ext_resource path="res://assets/Character/Run6.png" type="Texture" id=6]
+[ext_resource path="res://assets/Character/Idle3.png" type="Texture" id=7]
+[ext_resource path="res://assets/Character/Run3.png" type="Texture" id=8]
+[ext_resource path="res://assets/Character/Run4.png" type="Texture" id=9]
+[ext_resource path="res://assets/Character/Idle1.png" type="Texture" id=10]
+[ext_resource path="res://assets/Character/Run1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Character/Run2.png" type="Texture" id=12]
+[ext_resource path="res://assets/Character/Idle4.png" type="Texture" id=13]
+[ext_resource path="res://assets/Character/Defend1.png" type="Texture" id=14]
+[ext_resource path="res://assets/Character/Defend2.png" type="Texture" id=15]
+[ext_resource path="res://assets/Character/Defend3.png" type="Texture" id=16]
+[ext_resource path="res://assets/Character/Stab4.png" type="Texture" id=17]
+[ext_resource path="res://assets/Character/Defend4.png" type="Texture" id=18]
+[ext_resource path="res://assets/Character/Defend5.png" type="Texture" id=19]
+[ext_resource path="res://assets/Character/Defend6.png" type="Texture" id=20]
+[ext_resource path="res://assets/Character/Slash6.png" type="Texture" id=21]
+[ext_resource path="res://assets/Character/Stab7.png" type="Texture" id=22]
+[ext_resource path="res://assets/Character/Stab6.png" type="Texture" id=23]
+[ext_resource path="res://assets/Character/Stab1.png" type="Texture" id=24]
+[ext_resource path="res://assets/Character/Stab2.png" type="Texture" id=25]
+[ext_resource path="res://assets/Character/Stab5.png" type="Texture" id=26]
+[ext_resource path="res://assets/Character/Stab3.png" type="Texture" id=27]
+[ext_resource path="res://assets/Character/PowerUp5.png" type="Texture" id=28]
+[ext_resource path="res://assets/Character/PowerUp6.png" type="Texture" id=29]
+[ext_resource path="res://assets/Character/Defend7.png" type="Texture" id=30]
+[ext_resource path="res://assets/Character/Defend8.png" type="Texture" id=31]
+[ext_resource path="res://assets/Character/DamageTaken2.png" type="Texture" id=32]
+[ext_resource path="res://assets/Character/DamageTaken3.png" type="Texture" id=33]
+[ext_resource path="res://assets/Character/DamageTaken1.png" type="Texture" id=34]
+[ext_resource path="res://assets/Character/DamageTaken4.png" type="Texture" id=35]
+[ext_resource path="res://assets/Character/PowerUp1.png" type="Texture" id=36]
+[ext_resource path="res://assets/Character/PowerUp2.png" type="Texture" id=37]
+[ext_resource path="res://assets/Character/PowerUp4.png" type="Texture" id=38]
+[ext_resource path="res://assets/Character/PowerUp3.png" type="Texture" id=39]
+[ext_resource path="res://assets/Character/Slash4.png" type="Texture" id=40]
+[ext_resource path="res://assets/Character/Slash1.png" type="Texture" id=41]
+[ext_resource path="res://assets/Character/Slash2.png" type="Texture" id=42]
+[ext_resource path="res://assets/Character/Slash3.png" type="Texture" id=43]
+[ext_resource path="res://assets/Character/Slash5.png" type="Texture" id=44]
+[ext_resource path="res://ui/ArrowDown.png" type="Texture" id=45]
+[ext_resource path="res://ui/AttackUp.png" type="Texture" id=46]
+[ext_resource path="res://ui/ArrowUP.png" type="Texture" id=47]
+[ext_resource path="res://ui/AttackDown.png" type="Texture" id=48]
+[ext_resource path="res://ui/ArrowDownTurned.png" type="Texture" id=49]
+[ext_resource path="res://ui/ArrowUPTurned.png" type="Texture" id=50]
+[ext_resource path="res://assets/Character/slash7.png" type="Texture" id=51]
+[ext_resource path="res://ui/bars/backgroundProgressBar.png" type="Texture" id=52]
+[ext_resource path="res://ui/bars/redBar.png" type="Texture" id=53]
+[ext_resource path="res://scens/character/player/PlayNPause.gd" type="Script" id=54]
+[ext_resource path="res://font/new_dynamicfont.tres" type="DynamicFont" id=55]
+[ext_resource path="res://assets/Itens/coin/coin2.png" type="Texture" id=56]
+[ext_resource path="res://assets/Itens/coin/coin3.png" type="Texture" id=57]
+[ext_resource path="res://assets/Itens/coin/coin1.png" type="Texture" id=58]
+[ext_resource path="res://assets/Itens/coin/coin4.png" type="Texture" id=59]
+[ext_resource path="res://assets/Itens/coin/coin7.png" type="Texture" id=60]
+[ext_resource path="res://assets/Itens/coin/coin9.png" type="Texture" id=61]
+[ext_resource path="res://assets/Itens/coin/coin11.png" type="Texture" id=62]
+[ext_resource path="res://assets/Itens/coin/coin12.png" type="Texture" id=63]
+[ext_resource path="res://assets/Itens/coin/coin10.png" type="Texture" id=64]
+[ext_resource path="res://assets/Itens/coin/coin8.png" type="Texture" id=65]
+[ext_resource path="res://assets/Itens/coin/coin5.png" type="Texture" id=66]
+[ext_resource path="res://assets/Itens/coin/coin6.png" type="Texture" id=67]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 58 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 59 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 60 ), ExtResource( 65 ), ExtResource( 61 ), ExtResource( 64 ), ExtResource( 62 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "coin",
+"speed": 14.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 4.0
+height = 7.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "defend",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 40 ), ExtResource( 44 ), ExtResource( 21 ), ExtResource( 51 ) ],
+"loop": false,
+"name": "firstAttack",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 40 ), ExtResource( 44 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "fattack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "damageTaken",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 27 ), ExtResource( 17 ), ExtResource( 26 ), ExtResource( 23 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "secondAttack",
+"speed": 14.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "holdDefend",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 39 ), ExtResource( 38 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "powerUp",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 5.42473
+height = 39.0503
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 3.40047
+height = 7.75174
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 254.968, 72.5983 )
+
+[sub_resource type="CapsuleShape2D" id=6]
+radius = 3.82559
+height = 6.87774
+
+[node name="Player" type="KinematicBody2D" groups=["enemies", "player"]]
+pause_mode = 1
+collision_layer = 4099
+collision_mask = 3
+script = ExtResource( 1 )
+jump_speed = 5
+cam_zoom = 0.2
+
+[node name="cam" type="Camera2D" parent="."]
+z_index = 10
+current = true
+zoom = Vector2( 0.2, 0.2 )
+
+[node name="Control" type="Control" parent="cam"]
+margin_left = -77.0
+margin_top = -47.0
+margin_right = 77.0
+margin_bottom = 47.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="rightButtons" type="Control" parent="cam/Control"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -40.0
+margin_top = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jump" type="TouchScreenButton" parent="cam/Control/rightButtons"]
+position = Vector2( 38.163, 5.3989 )
+rotation = 1.5708
+normal = ExtResource( 47 )
+pressed = ExtResource( 45 )
+action = "jump"
+
+[node name="attack" type="TouchScreenButton" parent="cam/Control/rightButtons"]
+position = Vector2( 5.301, 22.5751 )
+normal = ExtResource( 46 )
+pressed = ExtResource( 48 )
+action = "firstAttack"
+
+[node name="leftButtons" type="Control" parent="cam/Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -40.0
+margin_right = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="left" type="TouchScreenButton" parent="cam/Control/leftButtons"]
+position = Vector2( 3.41165, 4.4227 )
+normal = ExtResource( 47 )
+pressed = ExtResource( 45 )
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="cam/Control/leftButtons"]
+position = Vector2( 21.652, 22.2311 )
+normal = ExtResource( 50 )
+pressed = ExtResource( 49 )
+action = "right"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="cam/Control"]
+anchor_right = 1.0
+margin_bottom = 4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="life" type="TextureProgress" parent="cam/Control/HBoxContainer"]
+margin_right = 16.0
+margin_bottom = 4.0
+texture_under = ExtResource( 52 )
+texture_progress = ExtResource( 53 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coins" type="Control" parent="cam/Control"]
+anchor_right = 1.0
+margin_top = 6.0
+margin_right = -139.0
+margin_bottom = 12.0
+
+[node name="coinAnim" type="AnimatedSprite" parent="cam/Control/Coins"]
+position = Vector2( 2.62511, 3.14585 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 7 )
+animation = "coin"
+
+[node name="coins" type="Label" parent="cam/Control/Coins"]
+margin_left = 6.0
+margin_top = 1.0
+margin_right = 57.0
+margin_bottom = 17.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = ExtResource( 55 )
+text = "999"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="cam/Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -25.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.2, 0.2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="controls" type="CheckButton" parent="cam/Control/Control"]
+modulate = Color( 1, 1, 1, 0.560784 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -131.0
+margin_top = -20.0
+margin_bottom = 20.0
+focus_mode = 0
+pressed = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="cam/Control/Control"]
+modulate = Color( 1, 1, 1, 0.560784 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 53.0
+margin_bottom = 7.0
+text = "Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.526997 )
+shape = SubResource( 1 )
+
+[node name="anim" type="AnimatedSprite" parent="."]
+position = Vector2( 1, -0.03 )
+frames = SubResource( 2 )
+animation = "firstAttack"
+frame = 6
+playing = true
+
+[node name="vision" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 1536
+
+[node name="telemetry" type="CollisionShape2D" parent="vision"]
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="colect" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 262272
+
+[node name="colectingColli" type="CollisionShape2D" parent="colect"]
+position = Vector2( 0, 1 )
+shape = SubResource( 4 )
+
+[node name="PlayNPause" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 1024
+script = ExtResource( 54 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayNPause"]
+position = Vector2( 0.420448, -21.3574 )
+shape = SubResource( 5 )
+
+[node name="MapDamage" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16384
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapDamage"]
+shape = SubResource( 6 )
+
+[connection signal="pressed" from="cam/Control/Control/controls" to="." method="change_controls_visibility"]
+[connection signal="area_entered" from="vision" to="." method="item_or_interact_on_vision"]
+[connection signal="area_exited" from="vision" to="." method="item_or_interact_out_vision"]
+[connection signal="body_entered" from="vision" to="." method="OnVisionSight"]
+[connection signal="body_exited" from="vision" to="." method="outOfVisionSight"]
+[connection signal="area_entered" from="colect" to="." method="iten_on_colect_range"]
+[connection signal="area_exited" from="colect" to="." method="iten_out_colect_range"]
+[connection signal="body_entered" from="colect" to="." method="colect_bodyIn"]
+[connection signal="body_exited" from="colect" to="." method="colect_bodyOut"]
+[connection signal="body_entered" from="PlayNPause" to="PlayNPause" method="Play_nodes"]
+[connection signal="body_exited" from="PlayNPause" to="PlayNPause" method="Pause_nodes"]
+[connection signal="area_entered" from="MapDamage" to="." method="check_map_damage"]
+[connection signal="area_exited" from="MapDamage" to="." method="map_damage_out"]

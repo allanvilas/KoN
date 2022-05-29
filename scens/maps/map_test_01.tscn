@@ -1,0 +1,123 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/scenes/barrel/barrel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scens/character/player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/Tileset/tileset_01.tress.tres" type="TileSet" id=4]
+[ext_resource path="res://assets/ParallaxBackground/Star1.png" type="Texture" id=5]
+[ext_resource path="res://assets/ParallaxBackground/ceu3.png" type="Texture" id=6]
+[ext_resource path="res://assets/Tileset/InnerGrass.png" type="Texture" id=7]
+[ext_resource path="res://assets/ParallaxBackground/backgroundColor.png" type="Texture" id=8]
+[ext_resource path="res://assets/ParallaxBackground/Lua.png" type="Texture" id=9]
+[ext_resource path="res://assets/ParallaxBackground/Tree2.png" type="Texture" id=10]
+[ext_resource path="res://assets/ParallaxBackground/Tree3.png" type="Texture" id=11]
+[ext_resource path="res://props_01.tres" type="TileSet" id=12]
+[ext_resource path="res://poison_tile.tres" type="TileSet" id=13]
+
+[node name="map_example" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 480, 256 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/background"]
+self_modulate = Color( 1.7, 1.7, 1.7, 1 )
+texture = ExtResource( 8 )
+
+[node name="Lua" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+motion_offset = Vector2( 240, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Lua"]
+texture = ExtResource( 9 )
+
+[node name="strelas" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 480, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/strelas"]
+texture = ExtResource( 5 )
+
+[node name="nuvem3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 480, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/nuvem3"]
+position = Vector2( 0, 96 )
+texture = ExtResource( 6 )
+
+[node name="tree2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 480, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/tree2"]
+modulate = Color( 0.14598, 0.18, 0.0342, 0.670588 )
+position = Vector2( -464, -24 )
+texture = ExtResource( 10 )
+offset = Vector2( 464, 48 )
+
+[node name="tree" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 480, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/tree"]
+position = Vector2( 0, 16 )
+texture = ExtResource( 11 )
+
+[node name="background_texture" type="TextureRect" parent="."]
+margin_left = -1496.0
+margin_top = 24.0
+margin_right = 1672.0
+margin_bottom = 560.0
+texture = ExtResource( 7 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -640, 0 )
+z_index = 2
+mov_speed = 100
+
+[node name="enemies" type="Node2D" parent="."]
+z_index = 2
+
+[node name="barrels" type="Node2D" parent="."]
+visible = false
+z_index = 2
+
+[node name="barrel" parent="barrels" instance=ExtResource( 2 )]
+position = Vector2( -608, 7.75529 )
+
+[node name="tilemaps" type="Node2D" parent="."]
+
+[node name="base_plataform" type="TileMap" parent="tilemaps"]
+position = Vector2( 40, -8 )
+z_index = 1
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -327684, -1073741799, 0, -196612, -1073741802, 0, -131076, -1073741802, 0, -65540, -1073741799, 0, 65531, -1073741802, 0, 65532, -1610612714, 0, 131019, 1610612771, 0, 131020, 1073741859, 0, 131021, 1073741859, 0, 131022, 1073741859, 0, 131023, 1073741859, 0, 131024, 1610612748, 0, 131027, 536870936, 0, 131028, 8, 0, 131029, 8, 0, 131030, 8, 0, 131031, 34, 0, 131066, -1073741802, 0, 131067, -1610612714, 0, 131068, -1610612714, 0, 196560, -1073741789, 0, 196563, -536870877, 0, 196567, 27, 0, 196568, 8, 0, 196569, 8, 0, 196570, 8, 0, 196571, 8, 0, 196572, 8, 0, 196573, 34, 0, 196591, -1610612724, 0, 196592, 536870920, 0, 196593, 536870920, 0, 196594, 536870920, 0, 196595, 536870920, 0, 196596, 536870920, 0, 196597, 536870920, 0, 196598, 536870920, 0, 196599, 536870920, 0, 196600, 536870920, 0, 196601, 536870920, 0, 196602, -1610612710, 0, 196603, -1610612710, 0, 196604, 1610612748, 0, 262096, -1073741789, 0, 262099, -536870877, 0, 262109, 1610612762, 0, 262127, 26, 0, 262140, -2147483613, 0, 327632, -1073741789, 0, 327635, -536870877, 0, 327645, 1610612762, 0, 327661, -1610612724, 0, 327662, 536870920, 0, 327663, -1073741797, 0, 327676, -2147483613, 0, 393168, -1073741789, 0, 393171, -536870877, 0, 393181, 1610612762, 0, 393197, 26, 0, 393212, -2147483613, 0, 458704, -1073741789, 0, 458707, -536870877, 0, 458717, 1610612762, 0, 458733, 26, 0, 458748, -2147483613, 0, 524240, -1073741789, 0, 524243, -536870877, 0, 524253, 1610612762, 0, 524269, 26, 0, 524284, -2147483613, 0, 589776, -1073741789, 0, 589779, -536870877, 0, 589789, 1610612762, 0, 589804, -1610612724, 0, 589805, -1073741797, 0, 589820, -2147483613, 0, 655312, -2147483613, 0, 655315, -536870877, 0, 655325, 1610612762, 0, 655340, 26, 0, 655356, -2147483613, 0, 720848, -2147483613, 0, 720851, -536870877, 0, 720861, 1610612762, 0, 720876, 26, 0, 720892, -2147483613, 0, 786384, 27, 0, 786385, 536870920, 0, 786386, 536870920, 0, 786387, 536870939, 0, 786397, 1610612762, 0, 786410, -1610612724, 0, 786411, -1610612710, 0, 786412, -1073741797, 0, 786428, -2147483613, 0, 851934, -1610612710, 0, 851935, -1610612710, 0, 851936, -1610612710, 0, 851937, -1610612710, 0, 851938, -1610612710, 0, 851939, -1610612710, 0, 851940, -1610612710, 0, 851941, -1610612710, 0, 851942, -1610612710, 0, 851943, -1610612710, 0, 851944, -1610612710, 0, 851945, -1610612710, 0, 851946, -1073741797, 0, 851964, -2147483613, 0 )
+
+[node name="props_01_back" type="TileMap" parent="tilemaps"]
+position = Vector2( 40, -8 )
+z_index = 1
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="poison_ditch" type="TileMap" parent="tilemaps"]
+position = Vector2( 40, -8 )
+z_index = 4
+tile_set = ExtResource( 13 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 16, 0, 0, 24, 0, 0 )
+format = 1
+
+[node name="props_02_front" type="TileMap" parent="tilemaps"]
+position = Vector2( 40, -8 )
+z_index = 4
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 16, 16 )
+format = 1
